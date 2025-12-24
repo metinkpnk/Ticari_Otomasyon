@@ -10,73 +10,103 @@ using System.Windows.Forms;
 
 namespace Ticari_Otomasyon
 {
+    // Ana modül formu - MDI (Multiple Document Interface) parent formu
+    // Tüm diğer formları bu form içinde açar ve yönetir
     public partial class FrmAnaModul : Form
     {
         public FrmAnaModul()
         {
-            InitializeComponent();
+            InitializeComponent(); // Form bileşenlerini başlat
         }
+
+        // Ürünler formu için referans değişkeni
         FrmUrunler fr;
+        
+        // Ürünler butonuna tıklandığında çalışan olay metodu
         private void BtnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // Eğer form daha önce açılmamış veya kapatılmışsa yeni form oluştur
             if(fr == null || fr.IsDisposed)
             {
-                fr = new FrmUrunler();
-                fr.MdiParent = this;
-                fr.Show();
+                fr = new FrmUrunler();        // Yeni ürünler formu oluştur
+                fr.MdiParent = this;          // Bu formu parent olarak ata (MDI child yapısı)
+                fr.Show();                    // Formu göster
             }
-         
+            // Eğer form zaten açıksa tekrar açma (singleton pattern)
         }
+
+        // Müşteriler formu için referans değişkeni
         FrmMusteriler fr2;
+        
+        // Müşteriler butonuna tıklandığında çalışan olay metodu
         private void BtnMusteriler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(fr2 == null || fr2.IsDisposed) // fr2 bilinmiyorsa
+            // Eğer müşteriler formu daha önce açılmamış veya kapatılmışsa
+            if(fr2 == null || fr2.IsDisposed)
             {
-                fr2 = new FrmMusteriler();
-                fr2.MdiParent = this;
-                fr2.Show();
+                fr2 = new FrmMusteriler();    // Yeni müşteriler formu oluştur
+                fr2.MdiParent = this;         // Bu formu parent olarak ata
+                fr2.Show();                   // Formu göster
             }
         }
+
+        // Firmalar formu için referans değişkeni
         FrmFirmalar fr3;
+        
+        // Firmalar butonuna tıklandığında çalışan olay metodu
         private void BtnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // Eğer firmalar formu daha önce açılmamış veya kapatılmışsa
             if (fr3 == null || fr3.IsDisposed)
             {
-                fr3 = new FrmFirmalar();
-                fr3.MdiParent = this;
-                fr3.Show();
+                fr3 = new FrmFirmalar();      // Yeni firmalar formu oluştur
+                fr3.MdiParent = this;         // Bu formu parent olarak ata
+                fr3.Show();                   // Formu göster
             }
         }
 
+        // Personel formu için referans değişkeni
         FrmPersonel fr4;
+        
+        // Personeller butonuna tıklandığında çalışan olay metodu
         private void BtnPersoneller_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // Eğer personel formu daha önce açılmamış veya kapatılmışsa
             if (fr4 == null || fr4.IsDisposed)
             {
-                fr4 = new FrmPersonel();
-                fr4.MdiParent = this;
-                fr4.Show();
+                fr4 = new FrmPersonel();      // Yeni personel formu oluştur
+                fr4.MdiParent = this;         // Bu formu parent olarak ata
+                fr4.Show();                   // Formu göster
             }
         }
 
+        // Rehber formu için referans değişkeni
         FrmRehber fr5;
+        
+        // Rehber butonuna tıklandığında çalışan olay metodu
         private void BtnRehber_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // Eğer rehber formu daha önce açılmamış veya kapatılmışsa
             if(fr5 == null || fr5.IsDisposed)
             {
-                fr5 = new FrmRehber();
-                fr5.MdiParent = this;
-                fr5.Show();
+                fr5 = new FrmRehber();        // Yeni rehber formu oluştur
+                fr5.MdiParent = this;         // Bu formu parent olarak ata
+                fr5.Show();                   // Formu göster
             }
         }
+
+        // Giderler formu için referans değişkeni
         FrmGiderler fr6;
+        
+        // Giderler butonuna tıklandığında çalışan olay metodu
         private void BtnGiderler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // Eğer giderler formu daha önce açılmamış veya kapatılmışsa
             if (fr6 == null || fr6.IsDisposed)
             {
-                fr6 = new FrmGiderler();
-                fr6.MdiParent = this;
-                fr6.Show();
+                fr6 = new FrmGiderler();      // Yeni giderler formu oluştur
+                fr6.MdiParent = this;         // Bu formu parent olarak ata
+                fr6.Show();                   // Formu göster
             }
         }
         FrmBankalar fr7;
