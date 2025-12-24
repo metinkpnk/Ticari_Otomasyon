@@ -1,6 +1,5 @@
 # 📦 SQL Tabanlı Ticari Otomasyon  
 **C# & DevExpress ile Ticari Otomasyon Projesi**  
-_Murat Yücedağ eğitimi kapsamında geliştirilmiştir._
 
 ---
 
@@ -208,13 +207,5 @@ Ticari_Otomasyon/
 - ✅ **Coğrafi Entegrasyon**: Türkiye il/ilçe veritabanı
 
 ---
-
-## 👨‍💻 **Geliştirici**
-**Murat Yücedağ** eğitimi kapsamında geliştirilmiştir.
-
----
-
-## 📄 **Lisans**
-Bu proje eğitim amaçlı geliştirilmiştir.
 
 
